@@ -1,0 +1,9 @@
+<%= form_with url:multi_database_admin_form_path, method: :post, local: true do |form| %>
+  <p>
+    <%= form.label :admin_name %><br>
+    <%= form.text_field :admin_name, autofocus: true, class: "appearance-none border-2 border-gray-300 bg-secondary-200 rounded w-full h-12 text-xl py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Admin name", required: true %>
+  </p>
+  <p>
+    <%= form.submit "Add Admin" %>
+  </p>
+<% end %>
