@@ -10,10 +10,18 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  username: multi_db_user
-  password: password
-  database: db_dev_first
+  primary:
+    <<: *default
+    username: multi_db_user
+    password: password
+    database: db_dev_first
+
+  primary2:
+    <<: *default
+    username: multi_db_user
+    password: password
+    database: db_dev_second
+    migrations_paths: db/primary2_migrate
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
