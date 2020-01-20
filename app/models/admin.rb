@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class Admin < ActiveRecord::Base
+class Admin < ApplicationRecord
 
 end

@@ -7,3 +7,52 @@
     <%= form.submit "Add Admin" %>
   </p>
 <% end %>
+<hr>
+
+<%= form_with url:multi_database_user_form_path, method: :post, local: true do |form| %>
+  <p style="margin-top: 5rem">
+    <%= form.label :user_name %><br>
+    <%= form.text_field :user_name, autofocus: true, class: "appearance-none border-2 border-gray-300 bg-secondary-200 rounded w-full h-12 text-xl py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "User name", required: true %>
+  </p>
+  <p>
+    <%= form.submit "Add User" %>
+  </p>
+<% end %>
+
+<hr>
+<hr>
+
+<%= form_with url:multi_database_app_form_path, method: :post, local: true do |form| %>
+  <p style="margin-top: 5rem">
+    <%= form.label :app_name %><br>
+    <%= form.text_field :app_name, autofocus: true, class: "appearance-none border-2 border-gray-300 bg-secondary-200 rounded w-full h-12 text-xl py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "App name", required: true %>
+  </p>
+  <p>
+    <%= form.submit "Add App" %>
+  </p>
+<% end %>
+<hr>
+
+<%= form_with url:multi_database_app_user_form_path, method: :post, local: true do |form| %>
+  <p style="margin-top: 5rem">
+    <%= form.label :app_user_name %><br>
+    <%= form.text_field :app_id, autofocus: true , placeholder: "App ID", required: true %>
+    <%= form.text_field :app_user_name, autofocus: true, class: "appearance-none border-2 border-gray-300 bg-secondary-200 rounded w-full h-12 text-xl py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "AppUser name", required: true %>
+  </p>
+  <p>
+    <%= form.submit "Add AppUser" %>
+  </p>
+<% end %>
+
+<hr>
+
+<%= form_with url:multi_database_app_owner_form_path, method: :post, local: true do |form| %>
+  <p style="margin-top: 5rem">
+    <%= form.label :app_owner_name %><br>
+    <%= form.text_field :app_id, autofocus: true , placeholder: "App ID", required: true %>
+    <%= form.text_field :app_owner_name, autofocus: true, class: "appearance-none border-2 border-gray-300 bg-secondary-200 rounded w-full h-12 text-xl py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "AppUser name", required: true %>
+  </p>
+  <p>
+    <%= form.submit "Add AppOwner" %>
+  </p>
+<% end %>
